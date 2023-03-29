@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isWho = false
+    var color: String  = ""
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        VStack{
+            Image(systemName: isWho ? "bolt" : "bolt.fill")
+            
+            Toggle(isOn: $isWho) { Text("Switch") }
+            
+            
         }
         .padding()
     }
