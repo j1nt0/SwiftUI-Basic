@@ -8,18 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isWho = false
-    var color: String  = ""
+    
+    @State var userID: String = ""
     
     var body: some View {
-        VStack{
-            Image(systemName: isWho ? "bolt" : "bolt.fill")
-            
-            Toggle(isOn: $isWho) { Text("Switch") }
-            
-            
+        VStack(alignment: .leading) {
+            Text("ID")
+            TextField("Enter your ID", text: $userID)
+                .textFieldStyle(.roundedBorder)
+            Text(userID=="" ? "ID = 입력 값 없음" : "ID = \(userID)")
         }
-        .padding()
+            .padding()
     }
 }
 
