@@ -24,14 +24,13 @@ struct TabButtonStyle: ButtonStyle {
 struct ContentView: View {
     
     @State var selectedTab: Tab = .home
-    @State var ab: Bool = true
     
     var body: some View {
         VStack {
             switch selectedTab {
             case .home:
                 NavigationView {
-                    HomeView(ab: $ab)
+                    HomeView()
                 }
             case .shop:
                 NavigationView {
@@ -42,14 +41,8 @@ struct ContentView: View {
                     ProfileView()
                 }
             }
-            if ab == true {
-                CustomTabView(selectedTab: $selectedTab)
-                    .buttonStyle(TabButtonStyle())
-            } else {
-                CustomTabView(selectedTab: $selectedTab)
-                    .buttonStyle(TabButtonStyle())
-                    .hidden()
-            }
+            CustomTabView(selectedTab: $selectedTab)
+            .buttonStyle(TabButtonStyle())
         }
     }
 }
@@ -106,69 +99,6 @@ struct CustomTabView: View {
             }
         }
         .frame(height: 50)
-    }
-}
-
-struct HomeView: View {
-    @Binding var ab: Bool
-    
-    var body: some View {
-        NavigationStack {
-            VStack {
-                HStack {
-                    Text("얌얌")
-                        .foregroundColor(Color("Symbol"))
-                        .font(.system(size: 30))
-                        .fontWeight(.heavy)
-                    Spacer()
-                    NavigationLink {
-                        CartView(ab: $ab)
-                    } label: {
-                        Image(systemName: "cart")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 30)
-                            .foregroundColor(.primary)
-                    }
-                }
-                Spacer()
-            }
-            .padding()
-        }
-    }
-}
-
-struct ShopView: View {
-    var body: some View {
-        Color(.systemGray6)
-            .ignoresSafeArea()
-            .navigationTitle(Text("Shop"))
-    }
-}
-
-struct ProfileView: View {
-    var body: some View {
-        Color(.systemGray6)
-            .ignoresSafeArea()
-            .navigationTitle(Text("Profile"))
-            .zIndex(1)
-    }
-}
-
-struct CartView: View {
-    
-    @Binding var ab: Bool
-    
-    var body: some View {
-        Color(.systemGray6)
-            .ignoresSafeArea()
-            .navigationTitle(Text("Cart"))
-            .onAppear {
-                ab = false
-            }
-            .onDisappear{
-                ab = true
-            }
     }
 }
 
