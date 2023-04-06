@@ -26,23 +26,25 @@ struct ContentView: View {
     @State var selectedTab: Tab = .home
     
     var body: some View {
-        VStack {
-            switch selectedTab {
-            case .home:
-                NavigationView {
-                    HomeView()
+        NavigationStack {
+            VStack {
+                switch selectedTab {
+                case .home:
+                    NavigationView {
+                        HomeView()
+                    }
+                case .shop:
+                    NavigationView {
+                        ShopView()
+                    }
+                case .profile:
+                    NavigationView {
+                        ProfileView()
+                    }
                 }
-            case .shop:
-                NavigationView {
-                    ShopView()
-                }
-            case .profile:
-                NavigationView {
-                    ProfileView()
-                }
+                CustomTabView(selectedTab: $selectedTab)
+                    .buttonStyle(TabButtonStyle())
             }
-            CustomTabView(selectedTab: $selectedTab)
-            .buttonStyle(TabButtonStyle())
         }
     }
 }

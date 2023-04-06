@@ -7,28 +7,27 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        TabView {
-            ZStack {
-                Color.orange
-                    .ignoresSafeArea()
-                Text("Page1")
-            }
-                .tabItem {
-                    Image(systemName: "heart")
-                    Text("item1")
-                }
-            ZStack {
-                Color.cyan
-                    .ignoresSafeArea()
-                Text("Page2")
-            }
-                .tabItem {
-                    Label("item2", systemImage: "heart")
-                }
+struct ContentView : View {
+  var body: some View {
+    TabView {
+      Text("The First Tab")
+        .tabItem {
+          Image(systemName: "1.square.fill")
+          Text("First")
+        }
+      Text("Another Tab")
+        .tabItem {
+          Image(systemName: "2.square.fill")
+          Text("Second")
+        }
+      Text("The Last Tab")
+            .tabItem {
+                Image(systemName: "3.square.fill")
+                Text("Third")
         }
     }
+    .font(.headline)
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {

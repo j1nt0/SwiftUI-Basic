@@ -8,31 +8,12 @@
 import SwiftUI
 
 struct HomeView: View {
-    
-    @State var isShow: Bool = false
-    
     var body: some View {
-        NavigationStack {
-            VStack {
-                Head(title: "얌얌")
-                Spacer()
-                Button {
-                    isShow.toggle()
-                } label: {
-                    Image(systemName: "heart")
-                }
-                .fullScreenCover(isPresented: $isShow) {
-                    Button {
-                        isShow.toggle()
-                    } label: {
-                        Image(systemName: "heart.fill")
-                    }
-
-                }
-                Spacer()
-            }
-            .padding()
+        VStack {
+            Head(title: "얌얌")
+            Spacer()
         }
+        .padding()
     }
 }
 

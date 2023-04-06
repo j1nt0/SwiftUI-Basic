@@ -9,14 +9,12 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        NavigationStack {
-            VStack {
-                Head(title: "My")
-                ProfileImage()
-                Spacer()
-            }
-            .padding()
+        VStack {
+            Head(title: "My")
+            ProfileImage()
+            Spacer()
         }
+        .padding()
     }
 }
 

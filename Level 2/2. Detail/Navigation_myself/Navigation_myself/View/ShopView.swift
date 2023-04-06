@@ -9,13 +9,11 @@ import SwiftUI
 
 struct ShopView: View {
     var body: some View {
-        NavigationStack {
-            VStack {
-                Head(title: "Shop")
-                Spacer()
-            }
-            .padding()
+        VStack {
+            Head(title: "Shop")
+            Spacer()
         }
+        .padding()
     }
 }
 
