@@ -7,27 +7,62 @@
 
 import SwiftUI
 
+enum Tab {
+    case first
+    case second
+    case third
+}
+
 struct ContentView : View {
-  var body: some View {
-    TabView {
-      Text("The First Tab")
-        .tabItem {
-          Image(systemName: "1.square.fill")
-          Text("First")
-        }
-      Text("Another Tab")
-        .tabItem {
-          Image(systemName: "2.square.fill")
-          Text("Second")
-        }
-      Text("The Last Tab")
-            .tabItem {
-                Image(systemName: "3.square.fill")
-                Text("Third")
+    @State var selectedTab: Tab = .first
+    var body: some View {
+        VStack {
+            Spacer()
+            switch selectedTab {
+            case .first:
+                Text("The First Tab")
+            case .second:
+                Text("The Second Tab")
+            case .third:
+                Text("The Third Tab")
+            }
+            Spacer()
+            CustomTabView(selectedTab: $selectedTab)
         }
     }
-    .font(.headline)
-  }
+}
+
+struct CustomTabView: View {
+    @Binding var selectedTab: Tab
+    var body: some View {
+        HStack {
+            Spacer()
+            Button() {
+                selectedTab = .first
+            } label: {
+                Image(systemName: "1.square")
+            }
+            Spacer()
+            ZStack {
+                Circle()
+                    .foregroundColor(Color(.orange))
+                    .frame(width: 90, height: 90)
+                Button {
+                    selectedTab = .second
+                } label: {
+                    Image(systemName: "2.square")
+                }
+            }
+            .offset(y: -32)
+            Spacer()
+            Button {
+                selectedTab = .third
+            } label: {
+                Image(systemName: "3.square")
+            }
+            Spacer()
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
