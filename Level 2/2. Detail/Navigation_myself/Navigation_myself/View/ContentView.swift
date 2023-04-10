@@ -27,7 +27,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
+            ZStack {
                 switch selectedTab {
                 case .home:
                     NavigationView {
@@ -42,8 +42,11 @@ struct ContentView: View {
                         ProfileView()
                     }
                 }
-                CustomTabView(selectedTab: $selectedTab)
-                    .buttonStyle(TabButtonStyle())
+                VStack {
+                    Spacer()
+                    CustomTabView(selectedTab: $selectedTab)
+                        .buttonStyle(TabButtonStyle())
+                }
             }
         }
     }
