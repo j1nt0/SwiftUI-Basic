@@ -6,16 +6,35 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ContentView: View {
+    @State private var documents: [DocumentSnapshot] = []
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        List(documents, id: \.documentID) { document in
+            HStack {
+                Text(document.data()?["name"] as? String ?? "")
+                    .font(.system(size: 20))
+                Spacer()
+                VStack(alignment: .trailing) {
+                    Text(document.data()?["category"] as? String ?? "")
+                    Text(document.data()?["address"] as? String ?? "")
+                        .font(.system(size: 15))
+                }
+            }
         }
-        .padding()
+        .onAppear {
+            let db = Firestore.firestore()
+            
+            db.collection("shop").getDocuments { querySnapshot, error in
+                if let error = error {
+                    print("Error getting documents: \(error.localizedDescription)")
+                } else {
+                    self.documents = querySnapshot?.documents ?? []
+                }
+            }
+        }
     }
 }
 
