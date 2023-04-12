@@ -15,7 +15,6 @@
 		8F4DF6F929E4574800812D8E /* firebase_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4DF6F829E4574800812D8E /* firebase_1UITests.swift */; };
 		8F4DF6FB29E4574800812D8E /* firebase_1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4DF6FA29E4574800812D8E /* firebase_1UITestsLaunchTests.swift */; };
 		8F4DF70A29E458AF00812D8E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8F4DF70929E458AF00812D8E /* FirebaseFirestore */; };
-		8F4DF71029E5248400812D8E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F4DF70F29E5248400812D8E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +45,6 @@
 		8F4DF6F429E4574800812D8E /* firebase_1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = firebase_1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F4DF6F829E4574800812D8E /* firebase_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebase_1UITests.swift; sourceTree = "<group>"; };
 		8F4DF6FA29E4574800812D8E /* firebase_1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebase_1UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		8F4DF70F29E5248400812D8E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +96,6 @@
 		8F4DF6DC29E4574600812D8E /* firebase_1 */ = {
 			isa = PBXGroup;
 			children = (
-				8F4DF70F29E5248400812D8E /* GoogleService-Info.plist */,
 				8F4DF6DD29E4574600812D8E /* firebase_1App.swift */,
 				8F4DF6DF29E4574600812D8E /* ContentView.swift */,
 				8F4DF6E129E4574700812D8E /* Assets.xcassets */,
@@ -244,7 +241,6 @@
 			files = (
 				8F4DF6E529E4574700812D8E /* Preview Assets.xcassets in Resources */,
 				8F4DF6E229E4574700812D8E /* Assets.xcassets in Resources */,
-				8F4DF71029E5248400812D8E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
