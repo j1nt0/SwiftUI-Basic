@@ -16,6 +16,8 @@
 		8F32136929F6D1020002A5B7 /* MVVMWithFirebaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F32136829F6D1020002A5B7 /* MVVMWithFirebaseUITestsLaunchTests.swift */; };
 		8F32137629F6D1590002A5B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F32137529F6D1590002A5B7 /* GoogleService-Info.plist */; };
 		8F32137929F6D1BA0002A5B7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8F32137829F6D1BA0002A5B7 /* FirebaseFirestore */; };
+		8F3213E729FC1C8C0002A5B7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3213E629FC1C8C0002A5B7 /* ViewModel.swift */; };
+		8F3213EC29FC1DAD0002A5B7 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3213EB29FC1DAD0002A5B7 /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		8F32136629F6D1020002A5B7 /* MVVMWithFirebaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMWithFirebaseUITests.swift; sourceTree = "<group>"; };
 		8F32136829F6D1020002A5B7 /* MVVMWithFirebaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMWithFirebaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8F32137529F6D1590002A5B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8F3213E629FC1C8C0002A5B7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		8F3213EB29FC1DAD0002A5B7 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +102,11 @@
 		8F32134A29F6D1000002A5B7 /* MVVMWithFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				8F3213EA29FC1D800002A5B7 /* ViewModels */,
+				8F3213E929FC1D7A0002A5B7 /* Models */,
+				8F3213E829FC1D660002A5B7 /* Views */,
 				8F32137529F6D1590002A5B7 /* GoogleService-Info.plist */,
 				8F32134B29F6D1000002A5B7 /* MVVMWithFirebaseApp.swift */,
-				8F32134D29F6D1000002A5B7 /* ContentView.swift */,
 				8F32134F29F6D1020002A5B7 /* Assets.xcassets */,
 				8F32135129F6D1020002A5B7 /* Preview Content */,
 			);
@@ -130,6 +136,30 @@
 				8F32136829F6D1020002A5B7 /* MVVMWithFirebaseUITestsLaunchTests.swift */,
 			);
 			path = MVVMWithFirebaseUITests;
+			sourceTree = "<group>";
+		};
+		8F3213E829FC1D660002A5B7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8F32134D29F6D1000002A5B7 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8F3213E929FC1D7A0002A5B7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8F3213EB29FC1DAD0002A5B7 /* Store.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8F3213EA29FC1D800002A5B7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8F3213E629FC1C8C0002A5B7 /* ViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +300,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F32134E29F6D1000002A5B7 /* ContentView.swift in Sources */,
+				8F3213E729FC1C8C0002A5B7 /* ViewModel.swift in Sources */,
 				8F32134C29F6D1000002A5B7 /* MVVMWithFirebaseApp.swift in Sources */,
+				8F3213EC29FC1DAD0002A5B7 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
