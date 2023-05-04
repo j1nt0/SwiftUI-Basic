@@ -1,8 +1,8 @@
 //
 //  HomeView.swift
-//  Navigation_myself
+//  YamYam
 //
-//  Created by 이진 on 2023/04/05.
+//  Created by 이진 on 2023/05/04.
 //
 
 import SwiftUI

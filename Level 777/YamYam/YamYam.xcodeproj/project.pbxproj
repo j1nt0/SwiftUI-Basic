@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F5405AE2A039073003B6EBC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5405AD2A039073003B6EBC /* ViewModel.swift */; };
+		8F5405FC2A0397CF003B6EBC /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5405FB2A0397CF003B6EBC /* CartView.swift */; };
+		8F5405FE2A0397F0003B6EBC /* HeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5405FD2A0397EF003B6EBC /* HeadView.swift */; };
+		8F5406002A0397FC003B6EBC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5405FF2A0397FC003B6EBC /* HomeView.swift */; };
+		8F5406022A03986B003B6EBC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5406012A03986B003B6EBC /* ProfileView.swift */; };
+		8F5406042A039887003B6EBC /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5406032A039887003B6EBC /* ShopView.swift */; };
+		8F5406062A03992D003B6EBC /* ShopDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5406052A03992D003B6EBC /* ShopDetailView.swift */; };
+		8F91794D2A038A0F0099CF8A /* YamYamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91794C2A038A0F0099CF8A /* YamYamApp.swift */; };
+		8F91794F2A038A0F0099CF8A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91794E2A038A0F0099CF8A /* ContentView.swift */; };
+		8F9179512A038A110099CF8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F9179502A038A110099CF8A /* Assets.xcassets */; };
+		8F9179542A038A110099CF8A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F9179532A038A110099CF8A /* Preview Assets.xcassets */; };
+		8F91795E2A038A110099CF8A /* YamYamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91795D2A038A110099CF8A /* YamYamTests.swift */; };
+		8F9179682A038A110099CF8A /* YamYamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9179672A038A110099CF8A /* YamYamUITests.swift */; };
+		8F91796A2A038A110099CF8A /* YamYamUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9179692A038A110099CF8A /* YamYamUITestsLaunchTests.swift */; };
+		8F9179772A038ACA0099CF8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F9179762A038ACA0099CF8A /* GoogleService-Info.plist */; };
+		8F91797A2A038C4A0099CF8A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8F9179792A038C4A0099CF8A /* FirebaseAuth */; };
+		8F91797C2A038C4A0099CF8A /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8F91797B2A038C4A0099CF8A /* FirebaseDatabase */; };
+		8F91797E2A038C4A0099CF8A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8F91797D2A038C4A0099CF8A /* FirebaseFirestore */; };
+		8F9179802A038C4A0099CF8A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8F91797F2A038C4A0099CF8A /* FirebaseStorage */; };
+		8F9179852A038F2F0099CF8A /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9179842A038F2F0099CF8A /* Store.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F91795A2A038A110099CF8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F9179412A038A0F0099CF8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F9179482A038A0F0099CF8A;
+			remoteInfo = YamYam;
+		};
+		8F9179642A038A110099CF8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F9179412A038A0F0099CF8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F9179482A038A0F0099CF8A;
+			remoteInfo = YamYam;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8F5405AD2A039073003B6EBC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		8F5405FB2A0397CF003B6EBC /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		8F5405FD2A0397EF003B6EBC /* HeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadView.swift; sourceTree = "<group>"; };
+		8F5405FF2A0397FC003B6EBC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8F5406012A03986B003B6EBC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		8F5406032A039887003B6EBC /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		8F5406052A03992D003B6EBC /* ShopDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailView.swift; sourceTree = "<group>"; };
+		8F9179492A038A0F0099CF8A /* YamYam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YamYam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F91794C2A038A0F0099CF8A /* YamYamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamYamApp.swift; sourceTree = "<group>"; };
+		8F91794E2A038A0F0099CF8A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8F9179502A038A110099CF8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F9179532A038A110099CF8A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8F9179592A038A110099CF8A /* YamYamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YamYamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F91795D2A038A110099CF8A /* YamYamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamYamTests.swift; sourceTree = "<group>"; };
+		8F9179632A038A110099CF8A /* YamYamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YamYamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F9179672A038A110099CF8A /* YamYamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamYamUITests.swift; sourceTree = "<group>"; };
+		8F9179692A038A110099CF8A /* YamYamUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamYamUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8F9179762A038ACA0099CF8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8F9179842A038F2F0099CF8A /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F9179462A038A0F0099CF8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F91797C2A038C4A0099CF8A /* FirebaseDatabase in Frameworks */,
+				8F9179802A038C4A0099CF8A /* FirebaseStorage in Frameworks */,
+				8F91797A2A038C4A0099CF8A /* FirebaseAuth in Frameworks */,
+				8F91797E2A038C4A0099CF8A /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F9179562A038A110099CF8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F9179602A038A110099CF8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F9179402A038A0F0099CF8A = {
+			isa = PBXGroup;
+			children = (
+				8F91794B2A038A0F0099CF8A /* YamYam */,
+				8F91795C2A038A110099CF8A /* YamYamTests */,
+				8F9179662A038A110099CF8A /* YamYamUITests */,
+				8F91794A2A038A0F0099CF8A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8F91794A2A038A0F0099CF8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F9179492A038A0F0099CF8A /* YamYam.app */,
+				8F9179592A038A110099CF8A /* YamYamTests.xctest */,
+				8F9179632A038A110099CF8A /* YamYamUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F91794B2A038A0F0099CF8A /* YamYam */ = {
+			isa = PBXGroup;
+			children = (
+				8F9179832A038D8A0099CF8A /* ViewModels */,
+				8F9179822A038D850099CF8A /* Views */,
+				8F9179812A038D7E0099CF8A /* Models */,
+				8F9179762A038ACA0099CF8A /* GoogleService-Info.plist */,
+				8F91794C2A038A0F0099CF8A /* YamYamApp.swift */,
+				8F9179502A038A110099CF8A /* Assets.xcassets */,
+				8F9179522A038A110099CF8A /* Preview Content */,
+			);
+			path = YamYam;
+			sourceTree = "<group>";
+		};
+		8F9179522A038A110099CF8A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8F9179532A038A110099CF8A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8F91795C2A038A110099CF8A /* YamYamTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F91795D2A038A110099CF8A /* YamYamTests.swift */,
+			);
+			path = YamYamTests;
+			sourceTree = "<group>";
+		};
+		8F9179662A038A110099CF8A /* YamYamUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8F9179672A038A110099CF8A /* YamYamUITests.swift */,
+				8F9179692A038A110099CF8A /* YamYamUITestsLaunchTests.swift */,
+			);
+			path = YamYamUITests;
+			sourceTree = "<group>";
+		};
+		8F9179812A038D7E0099CF8A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8F9179842A038F2F0099CF8A /* Store.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8F9179822A038D850099CF8A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8F91794E2A038A0F0099CF8A /* ContentView.swift */,
+				8F5405FB2A0397CF003B6EBC /* CartView.swift */,
+				8F5405FD2A0397EF003B6EBC /* HeadView.swift */,
+				8F5405FF2A0397FC003B6EBC /* HomeView.swift */,
+				8F5406012A03986B003B6EBC /* ProfileView.swift */,
+				8F5406032A039887003B6EBC /* ShopView.swift */,
+				8F5406052A03992D003B6EBC /* ShopDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8F9179832A038D8A0099CF8A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8F5405AD2A039073003B6EBC /* ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F9179482A038A0F0099CF8A /* YamYam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F91796D2A038A110099CF8A /* Build configuration list for PBXNativeTarget "YamYam" */;
+			buildPhases = (
+				8F9179452A038A0F0099CF8A /* Sources */,
+				8F9179462A038A0F0099CF8A /* Frameworks */,
+				8F9179472A038A0F0099CF8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YamYam;
+			packageProductDependencies = (
+				8F9179792A038C4A0099CF8A /* FirebaseAuth */,
+				8F91797B2A038C4A0099CF8A /* FirebaseDatabase */,
+				8F91797D2A038C4A0099CF8A /* FirebaseFirestore */,
+				8F91797F2A038C4A0099CF8A /* FirebaseStorage */,
+			);
+			productName = YamYam;
+			productReference = 8F9179492A038A0F0099CF8A /* YamYam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8F9179582A038A110099CF8A /* YamYamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F9179702A038A110099CF8A /* Build configuration list for PBXNativeTarget "YamYamTests" */;
+			buildPhases = (
+				8F9179552A038A110099CF8A /* Sources */,
+				8F9179562A038A110099CF8A /* Frameworks */,
+				8F9179572A038A110099CF8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F91795B2A038A110099CF8A /* PBXTargetDependency */,
+			);
+			name = YamYamTests;
+			productName = YamYamTests;
+			productReference = 8F9179592A038A110099CF8A /* YamYamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8F9179622A038A110099CF8A /* YamYamUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F9179732A038A110099CF8A /* Build configuration list for PBXNativeTarget "YamYamUITests" */;
+			buildPhases = (
+				8F91795F2A038A110099CF8A /* Sources */,
+				8F9179602A038A110099CF8A /* Frameworks */,
+				8F9179612A038A110099CF8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F9179652A038A110099CF8A /* PBXTargetDependency */,
+			);
+			name = YamYamUITests;
+			productName = YamYamUITests;
+			productReference = 8F9179632A038A110099CF8A /* YamYamUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F9179412A038A0F0099CF8A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					8F9179482A038A0F0099CF8A = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					8F9179582A038A110099CF8A = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 8F9179482A038A0F0099CF8A;
+					};
+					8F9179622A038A110099CF8A = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 8F9179482A038A0F0099CF8A;
+					};
+				};
+			};
+			buildConfigurationList = 8F9179442A038A0F0099CF8A /* Build configuration list for PBXProject "YamYam" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F9179402A038A0F0099CF8A;
+			packageReferences = (
+				8F9179782A038C4A0099CF8A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 8F91794A2A038A0F0099CF8A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F9179482A038A0F0099CF8A /* YamYam */,
+				8F9179582A038A110099CF8A /* YamYamTests */,
+				8F9179622A038A110099CF8A /* YamYamUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F9179472A038A0F0099CF8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F9179542A038A110099CF8A /* Preview Assets.xcassets in Resources */,
+				8F9179512A038A110099CF8A /* Assets.xcassets in Resources */,
+				8F9179772A038ACA0099CF8A /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F9179572A038A110099CF8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F9179612A038A110099CF8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F9179452A038A0F0099CF8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F5406022A03986B003B6EBC /* ProfileView.swift in Sources */,
+				8F5406062A03992D003B6EBC /* ShopDetailView.swift in Sources */,
+				8F5405FC2A0397CF003B6EBC /* CartView.swift in Sources */,
+				8F5406002A0397FC003B6EBC /* HomeView.swift in Sources */,
+				8F5406042A039887003B6EBC /* ShopView.swift in Sources */,
+				8F9179852A038F2F0099CF8A /* Store.swift in Sources */,
+				8F91794F2A038A0F0099CF8A /* ContentView.swift in Sources */,
+				8F5405AE2A039073003B6EBC /* ViewModel.swift in Sources */,
+				8F5405FE2A0397F0003B6EBC /* HeadView.swift in Sources */,
+				8F91794D2A038A0F0099CF8A /* YamYamApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F9179552A038A110099CF8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F91795E2A038A110099CF8A /* YamYamTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F91795F2A038A110099CF8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F91796A2A038A110099CF8A /* YamYamUITestsLaunchTests.swift in Sources */,
+				8F9179682A038A110099CF8A /* YamYamUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F91795B2A038A110099CF8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F9179482A038A0F0099CF8A /* YamYam */;
+			targetProxy = 8F91795A2A038A110099CF8A /* PBXContainerItemProxy */;
+		};
+		8F9179652A038A110099CF8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F9179482A038A0F0099CF8A /* YamYam */;
+			targetProxy = 8F9179642A038A110099CF8A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8F91796B2A038A110099CF8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8F91796C2A038A110099CF8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F91796E2A038A110099CF8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"YamYam/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.jinto.YamYam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F91796F2A038A110099CF8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"YamYam/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.jinto.YamYam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8F9179712A038A110099CF8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.jinto.YamYamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YamYam.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/YamYam";
+			};
+			name = Debug;
+		};
+		8F9179722A038A110099CF8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.jinto.YamYamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YamYam.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/YamYam";
+			};
+			name = Release;
+		};
+		8F9179742A038A110099CF8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.jinto.YamYamUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YamYam;
+			};
+			name = Debug;
+		};
+		8F9179752A038A110099CF8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.jinto.YamYamUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YamYam;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F9179442A038A0F0099CF8A /* Build configuration list for PBXProject "YamYam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F91796B2A038A110099CF8A /* Debug */,
+				8F91796C2A038A110099CF8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F91796D2A038A110099CF8A /* Build configuration list for PBXNativeTarget "YamYam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F91796E2A038A110099CF8A /* Debug */,
+				8F91796F2A038A110099CF8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F9179702A038A110099CF8A /* Build configuration list for PBXNativeTarget "YamYamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F9179712A038A110099CF8A /* Debug */,
+				8F9179722A038A110099CF8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F9179732A038A110099CF8A /* Build configuration list for PBXNativeTarget "YamYamUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F9179742A038A110099CF8A /* Debug */,
+				8F9179752A038A110099CF8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F9179782A038C4A0099CF8A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F9179792A038C4A0099CF8A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F9179782A038C4A0099CF8A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		8F91797B2A038C4A0099CF8A /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F9179782A038C4A0099CF8A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		8F91797D2A038C4A0099CF8A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F9179782A038C4A0099CF8A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		8F91797F2A038C4A0099CF8A /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F9179782A038C4A0099CF8A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8F9179412A038A0F0099CF8A /* Project object */;
+}
