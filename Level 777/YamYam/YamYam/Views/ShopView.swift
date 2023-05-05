@@ -26,6 +26,7 @@ struct ShopView: View {
     @State var number = ""
     @State var address = ""
     @State var category = ""
+    @State var menu = ["":0]
     
     @State var selectedTab: Category = .a
     
@@ -33,113 +34,15 @@ struct ShopView: View {
         NavigationStack {
             VStack {
                 Head(title: "Shop")
+                    .padding()
                 CategoryTabBar(selectedTab: $selectedTab)
-                ScrollView(.horizontal) {
-                    switch selectedTab {
-                    case .a:
-                        LazyHStack {
-                            ForEach(model.list, id: \.self) { item in
-                                ZStack {
-                                    RoundedRectangle(cornerRadius: 9)
-                                        .frame(width: 200, height: 200)
-                                        .foregroundColor(.secondary)
-                                    NavigationLink(item.address, value: item)
-                                        .navigationDestination(for: Store.self) {
-                                            i in ShopDetailView(model: i)
-                                        }
-                                }
-                            }
-                        }
-                    case .b:
-                        LazyHStack {
-                            ForEach(model.list, id: \.self) { item in
-                                ZStack {
-                                    RoundedRectangle(cornerRadius: 9)
-                                        .frame(width: 200, height: 200)
-                                        .foregroundColor(.secondary)
-                                    NavigationLink(item.address, value: item)
-                                        .navigationDestination(for: Store.self) {
-                                            i in ShopDetailView(model: i)
-                                        }
-                                }
-                            }
-                        }
-                    case .c:
-                        LazyHStack {
-                            ForEach(model.list, id: \.self) { item in
-                                ZStack {
-                                    RoundedRectangle(cornerRadius: 9)
-                                        .frame(width: 200, height: 200)
-                                        .foregroundColor(.secondary)
-                                    NavigationLink(item.address, value: item)
-                                        .navigationDestination(for: Store.self) {
-                                            i in ShopDetailView(model: i)
-                                        }
-                                }
-                            }
-                        }
-                    case .d:
-                        LazyHStack {
-                            ForEach(model.list, id: \.self) { item in
-                                ZStack {
-                                    RoundedRectangle(cornerRadius: 9)
-                                        .frame(width: 200, height: 200)
-                                        .foregroundColor(.secondary)
-                                    NavigationLink(item.address, value: item)
-                                        .navigationDestination(for: Store.self) {
-                                            i in ShopDetailView(model: i)
-                                        }
-                                }
-                            }
-                        }
-                    case .e:
-                        LazyHStack {
-                            ForEach(model.list, id: \.self) { item in
-                                ZStack {
-                                    RoundedRectangle(cornerRadius: 9)
-                                        .frame(width: 200, height: 200)
-                                        .foregroundColor(.secondary)
-                                    NavigationLink(item.address, value: item)
-                                        .navigationDestination(for: Store.self) {
-                                            i in ShopDetailView(model: i)
-                                        }
-                                }
-                            }
-                        }
-                    case .f:
-                        LazyHStack {
-                            ForEach(model.list, id: \.self) { item in
-                                ZStack {
-                                    RoundedRectangle(cornerRadius: 9)
-                                        .frame(width: 200, height: 200)
-                                        .foregroundColor(.secondary)
-                                    NavigationLink(item.address, value: item)
-                                        .navigationDestination(for: Store.self) {
-                                            i in ShopDetailView(model: i)
-                                        }
-                                }
-                            }
-                        }
-                    case .g:
-                        LazyHStack {
-                            ForEach(model.list, id: \.self) { item in
-                                ZStack {
-                                    RoundedRectangle(cornerRadius: 9)
-                                        .frame(width: 200, height: 200)
-                                        .foregroundColor(.secondary)
-                                    NavigationLink(item.address, value: item)
-                                        .navigationDestination(for: Store.self) {
-                                            i in ShopDetailView(model: i)
-                                        }
-                                }
-                            }
-                        }
-                    }
-                }
+                    .padding(.leading)
+                StoreCards(selectedTab: $selectedTab, model: model)
+                    .padding(.leading)
+                    .frame(height: 550)
                 Spacer()
             }
         }
-        .padding()
     }
     
     init() {
@@ -153,6 +56,8 @@ struct ShopView_Previews: PreviewProvider {
     }
 }
 
+
+// 카테고리 탭바
 struct CategoryTabBar: View {
     
     @Binding var selectedTab: Category
@@ -160,74 +65,126 @@ struct CategoryTabBar: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 40) {
-                Button {
-                    selectedTab = .a
-                } label: {
-                    Text("전체")
-                        .fontWeight(selectedTab == .a ? .bold : .medium)
-                        .foregroundColor(selectedTab == .a ? Color("Symbol") : .secondary)
-                }
-                Button {
-                    selectedTab = .b
-                } label: {
-                    Text("한식")
-                        .fontWeight(selectedTab == .b ? .bold : .medium)
-                        .foregroundColor(selectedTab == .b ? Color("Symbol") : .secondary)
-                }
-                Button {
-                    selectedTab = .c
-                } label: {
-                    Text("중식")
-                        .fontWeight(selectedTab == .c ? .bold : .medium)
-                        .foregroundColor(selectedTab == .c ? Color("Symbol") : .secondary)
-                }
-                Button {
-                    selectedTab = .d
-                } label: {
-                    Text("패스트푸드")
-                        .fontWeight(selectedTab == .d ? .bold : .medium)
-                        .foregroundColor(selectedTab == .d ? Color("Symbol") : .secondary)
-                }
-                Button {
-                    selectedTab = .e
-                } label: {
-                    Text("아시안")
-                        .fontWeight(selectedTab == .e ? .bold : .medium)
-                        .foregroundColor(selectedTab == .e ? Color("Symbol") : .secondary)
-                }
-                Button {
-                    selectedTab = .f
-                } label: {
-                    Text("분식")
-                        .fontWeight(selectedTab == .f ? .bold : .medium)
-                        .foregroundColor(selectedTab == .f ? Color("Symbol") : .secondary)
-                }
-                Button {
-                    selectedTab = .g
-                } label: {
-                    Text("카페")
-                        .fontWeight(selectedTab == .g ? .bold : .medium)
-                        .foregroundColor(selectedTab == .g ? Color("Symbol") : .secondary)
-                }
+                CategoryTabBarButton(tab: .a, selectedTab: $selectedTab)
+                CategoryTabBarButton(tab: .b, selectedTab: $selectedTab)
+                CategoryTabBarButton(tab: .c, selectedTab: $selectedTab)
+                CategoryTabBarButton(tab: .d, selectedTab: $selectedTab)
+                CategoryTabBarButton(tab: .e, selectedTab: $selectedTab)
+                CategoryTabBarButton(tab: .f, selectedTab: $selectedTab)
+                CategoryTabBarButton(tab: .g, selectedTab: $selectedTab)
             }
         }
-        .font(.system(size: 20))
     }
 }
 
+// 카테고리 탭바 버튼 커스터마이징
 struct CategoryTabBarButton: View {
     
+    var tab: Category
     @Binding var selectedTab: Category
     
     var body: some View {
-        
-        var tab: Category = .a
-        
         Button {
             selectedTab = tab
         } label: {
             Text(tab.rawValue)
+                .fontWeight(selectedTab == tab ? .bold : .medium)
                 .foregroundColor(selectedTab == tab ? Color("Symbol") : .secondary)
+                .font(.system(size: 20))
         }
+    }
+}
+
+// 카테고리 탭바 선택에 따른 카드 변화
+struct StoreCards: View {
+    
+    @Binding var selectedTab: Category
+    @ObservedObject var model = ViewModel()
+    
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            switch selectedTab {
+            case .a:
+                StoreCardsHStack(selectedTab: $selectedTab, model: model)
+            case .b:
+                StoreCardsHStack(selectedTab: $selectedTab, model: model)
+            case .c:
+                StoreCardsHStack(selectedTab: $selectedTab, model: model)
+            case .d:
+                StoreCardsHStack(selectedTab: $selectedTab, model: model)
+            case .e:
+                StoreCardsHStack(selectedTab: $selectedTab, model: model)
+            case .f:
+                StoreCardsHStack(selectedTab: $selectedTab, model: model)
+            case .g:
+                StoreCardsHStack(selectedTab: $selectedTab, model: model)
+            }
+        }
+    }
+}
+
+// 카테고리 선택에 따른 카드의 변화를 하나의 뷰로 정리
+struct StoreCardsHStack: View {
+    
+    @Binding var selectedTab: Category
+    @ObservedObject var model = ViewModel()
+    
+    var body: some View {
+        LazyHStack(spacing: 30) {
+            ForEach(model.list, id: \.self) { item in
+                // 현재 탭바의 카테고리가 전체 혹은 Store의 카테고리와 일치할 경우 출력
+                if item.category == selectedTab.rawValue || selectedTab.rawValue == "전체" {
+                    NavigationLink(value: item){
+                        ZStack {
+                            Image("card")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height:350)
+                            switch item.category {
+                            case "한식":
+                                Text("🍲")
+                                    .font(.system(size: 150))
+                                    .offset(x: 45, y: -150)
+                            case "중식":
+                                Text("🍛")
+                                    .font(.system(size: 150))
+                                    .offset(x: 45, y: -150)
+                            case "패스트푸드":
+                                Text("🍔")
+                                    .font(.system(size: 150))
+                                    .offset(x: 45, y: -150)
+                            case "아시안":
+                                Text("🍜")
+                                    .font(.system(size: 150))
+                                    .offset(x: 45, y: -150)
+                            case "분식":
+                                Text("🥟")
+                                    .font(.system(size: 150)) 
+                                    .offset(x: 45, y: -150)
+                            case "카페":
+                                Text("🍹")
+                                    .font(.system(size: 150))
+                                    .offset(x: 45, y: -150)
+                            default:
+                                Text("")
+                            }
+                            VStack(alignment: .leading, spacing: 5) {
+                                Text(item.name)
+                                    .font(.system(size: 35))
+                                Text(item.address)
+                            }
+                            .offset(y: 100)
+                            .padding()
+                            .foregroundColor(.white)
+                            .fontWeight(.heavy)
+                        }
+                    }
+                    .navigationDestination(for: Store.self) {
+                        i in ShopDetailView(model: i)
+                    }
+                }
+            }
+        }
+
     }
 }
