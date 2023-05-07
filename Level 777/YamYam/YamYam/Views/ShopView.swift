@@ -168,19 +168,23 @@ struct StoreCardsHStack: View {
                             default:
                                 Text("")
                             }
-                            VStack(alignment: .leading, spacing: 5) {
-                                Text(item.name)
-                                    .font(.system(size: 35))
-                                Text(item.address)
+                            HStack {
+                                VStack(alignment: .leading, spacing: 5) {
+                                    Text(item.name)
+                                        .font(.system(size: 35))
+                                    Text(item.address)
+                                }
+                                .offset(y: 100)
+                                .padding()
+                                .foregroundColor(.white)
+                                .fontWeight(.heavy)
+                                Spacer()
                             }
-                            .offset(y: 100)
-                            .padding()
-                            .foregroundColor(.white)
-                            .fontWeight(.heavy)
                         }
                     }
                     .navigationDestination(for: Store.self) {
                         i in ShopDetailView(model: i)
+                            .navigationBarBackButtonHidden()
                     }
                 }
             }
