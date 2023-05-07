@@ -15,6 +15,17 @@ struct ShopDetailView: View {
         VStack {
             Text(model.name)
             Text(model.address)
+            ForEach(model.menu.k) { key in
+                
+            }
+            Button {
+                print("@@@Start@@@")
+                print(type(of: model.menu))
+                print("@@@Fine@@@")
+            } label: {
+                Text("Click")
+            }
+
         }
     }
 }
