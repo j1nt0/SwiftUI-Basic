@@ -11,8 +11,11 @@ import Firebase
 class ViewModel: ObservableObject {
     
     @Published var list = [Store]()
+    @Published var isLoading = false
     
     func getData() {
+        
+        isLoading = true
         
         let db = Firestore.firestore()
         
@@ -41,6 +44,7 @@ class ViewModel: ObservableObject {
             }
             else {
                 // Handle the errors
+                self.isLoading = false
             }
         }
     }

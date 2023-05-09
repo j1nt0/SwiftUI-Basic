@@ -37,9 +37,14 @@ struct ShopView: View {
                     .padding()
                 CategoryTabBar(selectedTab: $selectedTab)
                     .padding(.leading)
-                StoreCards(selectedTab: $selectedTab, model: model)
-                    .padding(.leading)
-                    .frame(height: 550)
+                ZStack {
+                    if model.isLoading {
+                        ProgressView()
+                    }
+                    StoreCards(selectedTab: $selectedTab, model: model)
+                        .padding(.leading)
+                        .frame(height: 550)
+                }
                 Spacer()
             }
         }
@@ -143,20 +148,20 @@ struct StoreCardsHStack: View {
                             switch item.category {
                             case "한식":
                                 Text("🍲")
-                                    .font(.system(size: 150))
-                                    .offset(x: 45, y: -150)
+                                    .font(.system(size: 170))
+                                    .offset(x: 40, y: -170)
                             case "중식":
                                 Text("🍛")
-                                    .font(.system(size: 150))
-                                    .offset(x: 45, y: -150)
+                                    .font(.system(size: 170))
+                                    .offset(x: 40, y: -170)
                             case "패스트푸드":
                                 Text("🍔")
                                     .font(.system(size: 150))
                                     .offset(x: 45, y: -150)
                             case "아시안":
                                 Text("🍜")
-                                    .font(.system(size: 150))
-                                    .offset(x: 45, y: -150)
+                                    .font(.system(size: 160))
+                                    .offset(x: 45, y: -170)
                             case "분식":
                                 Text("🥟")
                                     .font(.system(size: 150)) 
@@ -170,11 +175,15 @@ struct StoreCardsHStack: View {
                             }
                             HStack {
                                 VStack(alignment: .leading, spacing: 5) {
+                                    // Store 별 이미지
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .frame(width: 80, height: 80)
+                                        .foregroundColor(.gray)
                                     Text(item.name)
                                         .font(.system(size: 35))
                                     Text(item.address)
                                 }
-                                .offset(y: 100)
+                                .offset(y: 50)
                                 .padding()
                                 .foregroundColor(.white)
                                 .fontWeight(.heavy)

@@ -20,6 +20,7 @@ struct Head: View {
             Spacer()
             NavigationLink {
                 CartView()
+                    .navigationBarBackButtonHidden()
             } label: {
                 Image(systemName: "cart")
                     .resizable()
