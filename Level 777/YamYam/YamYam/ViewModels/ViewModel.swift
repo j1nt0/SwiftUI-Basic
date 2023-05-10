@@ -41,6 +41,7 @@ class ViewModel: ObservableObject {
                         }
                     }
                 }
+                self.isLoading = false
             }
             else {
                 // Handle the errors

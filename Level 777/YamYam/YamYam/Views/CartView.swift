@@ -26,6 +26,9 @@ struct CartView: View {
                         CartCard()
                         CartCard()
                         CartCard()
+                        CartCard()
+                        CartCard()
+                        CartCard()
                     }
                 }
                 ZStack {
@@ -33,6 +36,17 @@ struct CartView: View {
                         .ignoresSafeArea()
                         .foregroundColor(Color("Symbol"))
                         .frame(height: 150)
+                    VStack {
+                        Text("g")
+                        Button {
+                            
+                        } label: {
+                            Text("Checkout")
+                        }
+                        .frame(width: 200)
+                        .buttonStyle(.borderedProminent)
+                        .buttonBorderShape(.capsule)
+                    }
                 }
             }
         }
@@ -74,19 +88,20 @@ struct CartCard: View {
         ZStack {
             Rectangle()
                 .foregroundColor(.white)
-                .frame(height: 300)
                 .shadow(color: Color(white: 0.1, opacity: 0.1), radius: 5, y: 10)
-            VStack {
+            VStack(alignment: .leading) {
                 HStack(spacing: 10) {
-                    RoundedRectangle(cornerRadius: 10)
-                        .frame(width: 50, height: 50)
+                    RoundedRectangle(cornerRadius: 5)
+                        .frame(width: 40, height: 40)
                         .foregroundColor(.gray)
                     Text("삼거리팟타이")
-                        .font(.system(size: 25))
+                        .font(.system(size: 20))
                     Spacer()
                 }
                 Divider()
-                Spacer()
+                Text("sssssssss")
+                Text("sssssssss")
+                Text("sssssssss")
             }
             .padding()
         }
