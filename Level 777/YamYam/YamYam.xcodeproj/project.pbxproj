@@ -14,6 +14,7 @@
 		8F5406022A03986B003B6EBC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5406012A03986B003B6EBC /* ProfileView.swift */; };
 		8F5406042A039887003B6EBC /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5406032A039887003B6EBC /* ShopView.swift */; };
 		8F5406062A03992D003B6EBC /* ShopDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5406052A03992D003B6EBC /* ShopDetailView.swift */; };
+		8F5B9E3B2A1CA570002778A6 /* testJustLikeThat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5B9E3A2A1CA56F002778A6 /* testJustLikeThat.swift */; };
 		8F91794D2A038A0F0099CF8A /* YamYamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91794C2A038A0F0099CF8A /* YamYamApp.swift */; };
 		8F91794F2A038A0F0099CF8A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91794E2A038A0F0099CF8A /* ContentView.swift */; };
 		8F9179512A038A110099CF8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F9179502A038A110099CF8A /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		8F5406012A03986B003B6EBC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		8F5406032A039887003B6EBC /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		8F5406052A03992D003B6EBC /* ShopDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailView.swift; sourceTree = "<group>"; };
+		8F5B9E3A2A1CA56F002778A6 /* testJustLikeThat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testJustLikeThat.swift; sourceTree = "<group>"; };
 		8F9179492A038A0F0099CF8A /* YamYam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YamYam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F91794C2A038A0F0099CF8A /* YamYamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamYamApp.swift; sourceTree = "<group>"; };
 		8F91794E2A038A0F0099CF8A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				8F5406012A03986B003B6EBC /* ProfileView.swift */,
 				8F5406032A039887003B6EBC /* ShopView.swift */,
 				8F5406052A03992D003B6EBC /* ShopDetailView.swift */,
+				8F5B9E3A2A1CA56F002778A6 /* testJustLikeThat.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				8F5406002A0397FC003B6EBC /* HomeView.swift in Sources */,
 				8F5406042A039887003B6EBC /* ShopView.swift in Sources */,
 				8F9179852A038F2F0099CF8A /* Store.swift in Sources */,
+				8F5B9E3B2A1CA570002778A6 /* testJustLikeThat.swift in Sources */,
 				8F91794F2A038A0F0099CF8A /* ContentView.swift in Sources */,
 				8F5405AE2A039073003B6EBC /* ViewModel.swift in Sources */,
 				8F5405FE2A0397F0003B6EBC /* HeadView.swift in Sources */,

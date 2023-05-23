@@ -192,7 +192,7 @@ struct StoreCardsHStack: View {
                         }
                     }
                     .navigationDestination(for: Store.self) {
-                        i in ShopDetailView(model: i)
+                        i in testJustLikeThat(model: i)
                             .navigationBarBackButtonHidden()
                     }
                 }

@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-func a() {
-    print("gs")
-}
-
 struct CartView: View {
+    
+//    @Binding var cartTotal: [[Store:[String:Int]]]
+    
     var body: some View {
         ZStack {
             Color(.systemGray6)
@@ -23,11 +22,7 @@ struct CartView: View {
                     // 카드 간 간격
                     VStack(spacing: 20) {
                         // 카드
-                        CartCard()
-                        CartCard()
-                        CartCard()
-                        CartCard()
-                        CartCard()
+//                        CartCard(cartTotal: $cartTotal)
                         CartCard()
                     }
                 }
@@ -84,6 +79,9 @@ struct CartHead: View {
 }
 
 struct CartCard: View {
+    
+//    @Binding var cartTotal: [[Store:[String:Int]]]
+    
     var body: some View {
         ZStack {
             Rectangle()
