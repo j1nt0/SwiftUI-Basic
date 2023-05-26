@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CartView: View {
     
-    @ObservedObject var order = ViewModel2()
+    @StateObject var order = ViewModel2()
     
     var body: some View {
         ZStack {

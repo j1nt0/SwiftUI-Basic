@@ -11,7 +11,7 @@ struct testJustLikeThat: View {
     
     var model = Store(id: "", name: "", number: "", address: "", category: "", menu: ["":0], operatingHour: ["":""], position: [0], point: 0)
         
-    @ObservedObject var order = ViewModel2()
+    @StateObject var order = ViewModel2()
 
 //  예시
 //    var a: Store = Store(id: "30DNiNyclYIH5Bi5u5tX", name: "피자스쿨 정릉점", number: "02-919-0066", address: "서울 성북구 보국문로16길 31", category: "패스트푸드", menu: ["페페로니피자": 9900, "핫치킨피자": 10900, "고구마피자": 10900, "치즈피자": 8900, "콤비네이션피자": 10900], operatingHour: ["": ""], position: [37.0, 127.0], point: 0)
