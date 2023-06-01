@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#category{
+    margin-top: 7px;
+}
+.sidebar{
+    /* display: none; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    background-color: #11101d;
+}
+.sidebar .logo_details{
+    padding-left: 30px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.sidebar .logo_details i{
+    font-size: 30px;
+    color: #fff;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    min-width: 78px;
+}
+.sidebar .logo_details .logo_name{
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
+}
+.sidebar .nav_links{
+    height: 100%;
+    padding: 30px 0 0 0;
+}
+.sidebar .nav_links li{
+    position: relative;
+    list-style: none;
+    transition: all 0.4s ease;
+}
+.sidebar .nav_links li:hover{
+    background: #1d1b31;
+}
+.sidebar .nav_links li .iocn_link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidebar .nav_links li i{
+    height: 50px;
+    min-width: 98px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 20px;
+}
+.sidebar .nav_links li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+}
+.sidebar .nav_links li a .link_name{
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+}
+.sidebar .nav_links li .sub_menu{
+    padding: 6px 6px 14px 80px;
+    margin: -10px 0 0 30px;
+    /* display: none; */
+}
+.sidebar .nav_links li .sub_menu a{
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 0;
+}
+#admin_1{
+    
+    margin: 50px 0 0 300px;
+    width: 60%;
+}
