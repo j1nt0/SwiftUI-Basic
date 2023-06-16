@@ -81,22 +81,63 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
 }
 
 struct StreetView: View {
+    
+    @Binding var isTakePicture: Bool
     let apiKey: String
     let latitude: Double
     let longitude: Double
     let heading: Int
 
     var body: some View {
-        if let streetViewURL = URL(string: "https://maps.googleapis.com/maps/api/streetview?size=400x250&location=\(latitude),\(longitude)&fov=80&heading=\(heading)&key=\(apiKey)"),
-           let imageData = try? Data(contentsOf: streetViewURL),
-           let streetViewImage = UIImage(data: imageData) {
-            Image(uiImage: streetViewImage)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 600)
-        } else {
-            Text("Failed to load Street View")
+        if isTakePicture {
+            if let streetViewURL = URL(string: "https://maps.googleapis.com/maps/api/streetview?size=400x250&location=\(latitude),\(longitude)&fov=80&heading=\(heading)&key=\(apiKey)") {
+                AsyncImageView(url: streetViewURL)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 600)
+            } else {
+                Text("Failed to load Street View")
+            }
         }
+    }
+}
+
+struct AsyncImageView: View {
+    @StateObject private var imageLoader: ImageLoader
+    
+    init(url: URL) {
+        _imageLoader = StateObject(wrappedValue: ImageLoader(url: url))
+    }
+    
+    var body: some View {
+        Group {
+            if let image = imageLoader.image {
+                Image(uiImage: image)
+                    .resizable()
+            } else {
+                EmptyView()
+            }
+        }
+    }
+}
+
+class ImageLoader: ObservableObject {
+    @Published var image: UIImage?
+    
+    private let url: URL
+    
+    init(url: URL) {
+        self.url = url
+        loadImage()
+    }
+    
+    func loadImage() {
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let data = data {
+                DispatchQueue.main.async {
+                    self.image = UIImage(data: data)
+                }
+            }
+        }.resume()
     }
 }
 
@@ -193,6 +234,7 @@ struct ContentView: View {
     @State private var isTakeFicture = false
     @State private var isShutterOpen = false
     @State private var isLightning = false
+    @State private var justFake = true
     
     var body: some View {
         ZStack {
@@ -201,6 +243,13 @@ struct ContentView: View {
             HStack {
                 Spacer()
                 VStack {
+                    Button {
+                        justFake.toggle()
+                    } label: {
+                        Image(systemName: "bolt")
+                            .foregroundColor(.black)
+                    }
+
                     Spacer()
                     FlashButton()
                 }
@@ -208,10 +257,16 @@ struct ContentView: View {
                 Spacer()
                 ZStack {
                     if isTakeFicture {
-                        StreetView(apiKey: "api-key", latitude: locationManager.latitude, longitude: locationManager.longitude, heading: (Int(compassManager.heading)+90) % 360)
+                        StreetView(isTakePicture: $isTakeFicture, apiKey: "api-key", latitude: locationManager.latitude, longitude: locationManager.longitude, heading: (Int(compassManager.heading)+90) % 360)
                     }
                     else {
-                        Rectangle().foregroundColor(.blue)
+                        if justFake {
+                            Image("background")
+                                .resizable()
+                        } else {
+                            Rectangle().foregroundColor(.blue)
+                        }
+                        
                     }
                     GuideLine()
                 }
